@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingresso - SeeTicket</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+      body, html {
+        height: 100%;
+        margin: 0;
+        font-family: 'Montserrat', sans-serif;
+      }
+
+      .custom-navbar {
+        background-color: #343a40;
+      }
+
+      .ingresso-container {
+        margin-top: 70px;
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0.9);
+        padding: 30px;
+        border-radius: 10px;
+      }
+
+      .ingresso {
+        border: 2px dashed #28a745;
+        padding: 20px;
+        border-radius: 15px;
+        display: inline-block;
+        width: 100%;
+        max-width: 400px;
+        background-color: #fff;
+        margin-top: 30px;
+      }
+
+      .ingresso h3 {
+        margin-bottom: 10px;
+        font-weight: 600;
+      }
+
+      .btn-primary {
+        background-color: #28a745;
+        border: none;
+        border-radius: 10px;
+        padding: 12px 15px;
+        font-size: 18px;
+        margin-top: 20px;
+      }
+
+      .qr-code {
+        margin-top: 15px;
+        background-color: #eee;
+        padding: 10px;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark custom-navbar">
+      <a class="navbar-brand" onclick="location.href='homepage.html'">SeeTicket</a>
+      <div class="navbar-collapse">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" onclick="location.href='homepage.html'">Eventos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" onclick="location.href='areaCliente.html'">Ingressos</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container ingresso-container">
+      <h2 class="mb-4">Ingresso Gerado</h2>
+      <div class="ingresso">
+        <h3>Show da Banda</h3>
+        <p>Data: 12/12/2024</p>
+        <p>Local: Campina Grande</p>
+        <div class="qr-code">
+          <img src="https://via.placeholder.com/150" alt="QR Code">
+        </div>
+        <!-- Botão Baixar dentro da div.ingresso -->
+        <button class="btn btn-primary">Baixar Ingresso</button>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

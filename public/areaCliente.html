@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
+    <title>Área do Cliente - SeeTicket</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+      body, html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+      .nav-scroller {
+        background-color: #fff;
+        box-shadow: 0 2px 10px #343a40;
+      }
+
+      .custom-navbar {
+        background-color: #343a40;
+    }
+
+      .cliente-container {
+        margin-top: 70px; /* Espaço para a navbar fixa */
+      }
+
+      .card {
+        cursor: pointer;
+        transition: transform 0.3s;
+      }
+
+      .card:hover {
+        transform: scale(1.05);
+      }
+
+      .btn-primary {
+        background-color: #28a745;
+        border: none;
+        border-radius: 10px;
+        padding: 12px 15px;
+        font-size: 18px;
+      }
+
+      .btn-danger {
+        margin-top: 10px;
+      }
+</style>
+
+    </style>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark custom-navbar"> 
+      <a class="navbar-brand" onclick="location.href='homepage.html'">SeeTicket</a>
+      <button class="navbar-toggler p-0 border-0" type="button" data-toggle="offcanvas">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+                <a class="nav-link" onclick="location.href='homepage.html'">Eventos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" onclick="location.href='areaCliente.html'">Ingressos</a>
+            </li>
+        </ul>
+        
+        <form class="d-flex my-2 my-lg-0 me-1">
+            <input class="form-control me-2" type="text" placeholder="Pesquisa" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Pesquisar</button>
+        </form>
+        
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="perfil.html">Perfil</a>
+            </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="nav-scroller bg-white shadow-sm">
+      <nav class="nav nav-underline">
+        <a class="nav-link" href="#">Ingressos</a>
+      </nav>
+    </div>
+
+    <main role="main" class="container cliente-container">
+      <h2 class="mt-4 mb-4">Área do Cliente</h2>
+      <div class="d-flex justify-content-between mb-4">
+        <h3>Seus Ingressos</h3>
+        <button type="button" class="btn btn-primary" onclick="location.href='comprarIngresso.html'">Comprar Novo Ingresso</button>
+      </div>
+
+      <div class="my-3 p-3 bg-white rounded shadow-sm">
+        <h6 class="border-bottom border-gray pb-2 mb-0">Ingressos Comprados</h6>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+          <div class="col">
+            <div class="card" onclick="location.href='gerarIngresso.html'">
+              <div class="card-body">
+                <h5 class="card-title">Show da Banda</h5>
+                <p class="card-text">Data: 12/12/2024<br>Local: Campina Grande<br>Status: Confirmado</p>
+                <button class="btn btn-secondary btn-sm" onclick="location.href='gerarIngresso.html'">gerar Ingresso</button>
+                <button class="btn btn-danger btn-sm" onclick="event.stopPropagation();">Cancelar</button>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" onclick="location.href=''">
+              <div class="card-body">
+                <h5 class="card-title">Palestra de Tecnologia</h5>
+                <p class="card-text">Data: 15/01/2025<br>Local: João Pessoa<br>Status: Confirmado</p>
+                <button class="btn btn-secondary" onclick="location.href='gerarIngresso.html'">gerar Ingresso</button>
+                <button class="btn btn-danger btn-sm" onclick="event.stopPropagation();">Cancelar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9gybhs+1C+tH3cIVwD0Tc4/hgllF7vQxLh0RI8F2cLxl/tzXtS" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+  </body>
+</html>

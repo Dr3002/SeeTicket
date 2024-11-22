@@ -1,0 +1,15 @@
+{
+  "name": "seeticket",
+  "version": "1.0.0",
+  "description": "Sistema básico sem Express",
+  "main": "app.js",
+  "scripts": {
+    "start": "node server/app.js"
+  },
+  "dependencies": {
+    "open": "^10.1.0",
+    "opn": "^6.0.0",
+    "pg": "^8.13.1",
+    "seeticket": "file:"
+  }
+}

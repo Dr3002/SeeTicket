@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprar Ingresso - SeeTicket</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+      body, html {
+        height: 100%;
+        margin: 0;
+        font-family: 'Montserrat', sans-serif;
+      }
+
+      .custom-navbar {
+        background-color: #343a40;
+      }
+
+      .comprar-container {
+        margin-top: 70px; /* Espaço para a navbar fixa */
+        background-color: rgba(255, 255, 255, 0.9);
+        padding: 30px;
+        border-radius: 10px;
+      }
+
+      .btn-primary {
+        background-color: #28a745;
+        border: none;
+        border-radius: 10px;
+        padding: 12px 15px;
+        font-size: 18px;
+      }
+
+      label {
+        font-weight: 600;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark custom-navbar">
+      <a class="navbar-brand" onclick="location.href='homepage.html'">SeeTicket</a>
+      <div class="navbar-collapse">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" onclick="location.href='homepage.html'">Eventos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" onclick="location.href='areaCliente.html'">Ingressos</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container comprar-container">
+      <h2 class="mb-4">Comprar Ingresso</h2>
+      <form>
+        <div class="mb-3">
+          <label for="evento" class="form-label">Nome do Evento</label>
+          <select class="form-select" id="evento">
+            <option selected>Selecione o evento</option>
+            <option value="1">Show da Banda</option>
+            <option value="2">Palestra de Tecnologia</option>
+            <!-- Mais opções de eventos -->
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <label for="quantidade" class="form-label">Quantidade de Ingressos</label>
+          <input type="number" class="form-control" id="quantidade" min="1" max="10" placeholder="1">
+        </div>
+
+        <div class="d-grid gap-2">
+          <button type="submit" class="btn btn-primary">Confirmar Compra</button>
+        </div>
+      </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

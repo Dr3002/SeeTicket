@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SeeTicket - Eventos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            background-color: white; /* Background da página */
+            display: flex;
+            flex-direction: column;
+        }
+
+        .nav-scroller {
+            background-color: #343a40;
+            box-shadow: 0 2px 10px #343a40;
+        }
+
+        .custom-navbar {
+        background-color: #343a40;
+        border-bottom: 2px solid #ddd; /* Borda inferior */
+        }
+
+
+        .home-container {
+            margin-top: 70px; /* Espaço para a navbar fixa */
+        }
+
+        .content {
+            margin-left: 260px;
+            padding: 40px;
+            width: calc(100% - 260px);
+        }
+
+        .btn-enter {
+            background-color: #56ab2f;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 10px;
+            margin-left: 15px;
+        }
+
+        h2 {
+            color: #333;
+            font-size: 36px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            text-align: left;
+        }        
+
+        .card {
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .card .card-image {
+            background-color: #56ab2f;
+            color: white;
+            font-size: 18px;
+            padding: 80px 0;
+            border-radius: 12px 12px 0 0;
+            cursor: pointer;
+        }
+
+        .card h5 {
+            font-weight: 600;
+            color: #333;
+            margin-top: 15px;
+        }
+
+        .card p {
+            color: #666;
+        }
+
+        .selected {
+            border: 3px solid #56ab2f;
+        }
+
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+
+            .content {
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg fixed navbar-dark custom-navbar"> 
+        <a class="navbar-brand" onclick="location.href='homepage.html'">SeeTicket</a>
+        <button class="navbar-toggler p-0 border-0" type="button" data-toggle="offcanvas">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+  
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+                <a class="nav-link" onclick="location.href='inicio.html'">Início</a>
+            </li>
+              <li class="nav-item">
+                  <a class="nav-link" onclick="location.href='homepage.html'">Eventos</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" onclick="location.href='areaCliente.html'">Ingressos</a>
+              </li>
+          </ul>
+          
+          <form class="d-flex my-2 my-lg-0">
+              <input class="form-control me-2" type="text" placeholder="Pesquisa" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Pesquisar</button>
+          </form>
+
+          <!-- Botão Entrar  -->
+          <button class="btn btn-enter" onclick="window.location.href='login.html'">Entrar</button>
+        </div>
+      </nav>
+
+    <div class="content">
+        
+        <!-- Sessão de Shows -->
+        <section class="mb-5">
+            <h2>Shows</h2>
+            <div class="row row-cols-1 row-cols-md-4 g-4">
+                <div class="col">
+                    <div class="card">
+                        <div class="card-image" onclick="selectCard(this)">Foto do Artista</div>
+                        <div class="card-body">
+                            <h5 class="card-title">Cantor</h5>
+                            <p class="card-text">Descrição do evento</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <div class="card-image" onclick="selectCard(this)">Foto da Banda</div>
+                        <div class="card-body">
+                            <h5 class="card-title">Banda</h5>
+                            <p class="card-text">Descrição do evento</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <div class="card-image" onclick="selectCard(this)">Foto da Cantora</div>
+                        <div class="card-body">
+                            <h5 class="card-title">Cantora</h5>
+                            <p class="card-text">Descrição do evento</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <div class="card-image" onclick="selectCard(this)">Foto do Comediante</div>
+                        <div class="card-body">
+                            <h5 class="card-title">Comediante</h5>
+                            <p class="card-text">Descrição do evento</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sessão de Palestras -->
+        <section>
+            <h2>Palestras</h2>
+            <div class="row row-cols-1 row-cols-md-4 g-4">
+                <div class="col">
+                    <div class="card">
+                        <div class="card-image" onclick="selectCard(this)">Foto do Palestrante</div>
+                        <div class="card-body">
+                            <h5 class="card-title">Palestrante</h5>
+                            <p class="card-text">Tema do Evento</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <div class="card-image" onclick="selectCard(this)">Foto do Palestrante</div>
+                        <div class="card-body">
+                            <h5 class="card-title">Palestrante</h5>
+                            <p class="card-text">Tema do Evento</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <div class="card-image" onclick="selectCard(this)">Foto do Palestrante</div>
+                        <div class="card-body">
+                            <h5 class="card-title">Palestrante</h5>
+                            <p class="card-text">Tema do Evento</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <div class="card-image" onclick="selectCard(this)">Foto do Palestrante</div>
+                        <div class="card-body">
+                            <h5 class="card-title">Palestrante</h5>
+                            <p class="card-text">Tema do Evento</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        function selectCard(element) {
+            const card = element.closest('.card');
+            card.classList.toggle('selected'); // Adiciona ou remove a classe 'selected' ao clicar
+        }
+    </script>
+</body>
+</html>

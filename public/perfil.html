@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil do Usuário - SeeTicket</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            background: url('https://images.unsplash.com/photo-1524985069026-dd778a71c7b4') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        body::after {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(86, 171, 47, 0.85);
+            z-index: 0;
+        }
+
+        .profile-container {
+            position: relative;
+            z-index: 1;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 16px;
+            padding: 40px;
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .profile-container img {
+            width: 100px;
+            margin-bottom: 20px;
+            border-radius: 50%;
+            border: 3px solid #56ab2f;
+        }
+
+        .profile-container h1 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .profile-info {
+            font-size: 18px;
+            color: #555;
+            text-align: left;
+            margin-bottom: 30px;
+        }
+
+        .profile-info p {
+            margin: 15px 0;
+        }
+
+        .profile-info p span {
+            font-weight: 600;
+            color: #333;
+        }
+
+        .btn-primary {
+            background-color: #56ab2f;
+            border: none;
+            border-radius: 10px;
+            padding: 12px 20px;
+            font-size: 18px;
+            width: 100%;
+            transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .btn-primary:hover {
+            background-color: #4c9a2a;
+            box-shadow: 0 4px 12px rgba(76, 154, 42, 0.3);
+        }
+
+        .btn-back {
+            margin-top: 20px;
+            background-color: transparent;
+            color: #555;
+            text-decoration: underline;
+            border: none;
+            font-size: 16px;
+        }
+
+        .btn-back:hover {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+<div class="profile-container">
+    <img src="https://img.icons8.com/ios-filled/100/000000/user-male-circle.png" alt="User Profile">
+    <h1>Daniel Ribeiro</h1>
+
+    <div class="profile-info">
+        <p><span>Nome:</span> Daniel Ribeiro</p>
+        <p><span>Email:</span> danram2828@gmail.com</p>
+        <p><span>Quantidade de Eventos:</span> 2</p>
+    </div>
+
+    <button class="btn-primary" onclick="location.href='homepage.html'">Voltar para Página Inicial</button>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- Cabeçalho da página HTML (HTML) -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SeeTicket - Sistema de Venda de Ingressos</title>
+    
+    <!-- Link para o CSS do Bootstrap (CSS) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Link para fonte externa (Google Fonts) e estilização de texto (CSS) -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Estilos customizados (CSS) */
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Montserrat', sans-serif; /* Font-family do Google Fonts */
+        }
+
+        .navbar-brand {
+            font-weight: 600; /* Estilo da logo da navbar */
+        }
+
+        .main-section {
+            background: url('https://images.unsplash.com/photo-1524985069026-dd778a71c7b4') no-repeat center center; /* Imagem de fundo para a seção */
+            background-size: cover; /* Estilo para cobrir a tela */
+            color: #fff;
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .main-section h1 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .main-section p {
+            font-size: 20px;
+            margin-bottom: 40px;
+        }
+
+        .btn-primary, .btn-success {
+            border-radius: 8px; /* Botões arredondados */
+            padding: 12px 24px;
+            font-size: 16px;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Efeito de hover nos botões */
+        }
+
+        .btn-primary:hover, .btn-success:hover {
+            transform: scale(1.05); /* Efeito de zoom no hover */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Sombras ao passar o mouse */
+        }
+
+        .info-section {
+            padding: 60px 0;
+            background-color: #f9f9f9;
+        }
+
+        .info-section h3 {
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .info-section p {
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        footer {
+            background: #f1f1f1;
+            padding: 20px 0;
+            text-align: center;
+            border-top: 1px solid #e1e1e1;
+        }
+
+        footer p {
+            margin: 0;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar (HTML) com o uso do Bootstrap para estrutura -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">SeeTicket</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" onclick="location.href='inicio.html'">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" onclick="location.href='homepage.html'">Eventos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" onclick="location.href='login.html'">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Seção Principal com título e botões (HTML) -->
+    <div class="main-section">
+        <div class="container">
+            <h1>Bem-vindo ao SeeTicket</h1>
+            <p>O sistema completo para gestão e venda de ingressos para eventos.</p>
+            <a href="#" class="btn btn-primary mx-2" onclick="location.href='areaOrganizador.html'">Área do Organizador</a>
+            <a href="#" class="btn btn-success mx-2" onclick="location.href='areaCliente.html'">Área do Cliente</a>
+        </div>
+    </div>
+
+    <!-- Seção de Informações (HTML) com 2 colunas e descrição (CSS & Bootstrap) -->
+    <div class="container info-section">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Para Organizadores</h3>
+                <p>Crie, edite e gerencie seus eventos com facilidade. Controle de vendas, relatórios e tudo o que você precisa em um só lugar.</p>
+                <a href="#" class="btn btn-primary">Saiba Mais</a>
+            </div>
+            <div class="col-md-6">
+                <h3>Para Clientes</h3>
+                <p>Encontre eventos, compre ingressos e aproveite experiências únicas. Veja eventos populares e descubra novas atividades perto de você.</p>
+                <a href="#" class="btn btn-success" onclick="location.href='homepage.html'">Veja Eventos</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rodapé (HTML) -->
+    <footer>
+        <p>SeeTicket © 2024. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Scripts do Bootstrap (JavaScript) -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+    <!-- Script Customizado (JavaScript) -->
+    <script>
+        // Exemplo de como JavaScript pode ser utilizado para navegação entre páginas:
+        function navigateToPage(page) {
+            window.location.href = page;
+        }
+    </script>
+</body>
+</html>
